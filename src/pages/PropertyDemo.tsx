@@ -49,8 +49,8 @@ const PropertyDemoPage = () => {
 
   return (
     <PropertyThemeProvider theme={activeTheme}>
-      {/* Floating control panel */}
-      <div className="fixed top-16 right-4 z-50 bg-background/95 backdrop-blur-sm rounded-2xl shadow-elevated border border-border/50 p-3 space-y-3 max-w-[200px]">
+      {/* Floating control panel — hidden on ad template for clean demo */}
+      <div className={`fixed top-16 right-4 z-50 bg-background/95 backdrop-blur-sm rounded-2xl shadow-elevated border border-border/50 p-3 space-y-3 max-w-[200px] ${activeTemplate === "ad" ? "hidden" : ""}`}>
         <div>
           <p className="text-[10px] font-body font-medium text-muted-foreground uppercase tracking-wider mb-1.5">Template</p>
           <div className="space-y-1">
