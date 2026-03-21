@@ -12,16 +12,16 @@ import { QuickActions } from "@/components/admin/QuickActions";
 const AdminDashboard = () => {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-[hsl(200_20%_98%)]">
+      <div className="min-h-screen flex w-full bg-[hsl(200_15%_97%)]">
         <AdminSidebar />
         <div className="flex-1 flex flex-col min-w-0">
           <AdminTopbar />
           <main className="flex-1 overflow-y-auto">
-            <div className="p-4 sm:p-6 lg:p-8 max-w-[1440px] mx-auto space-y-6">
+            <div className="p-4 sm:p-6 lg:p-8 max-w-[1440px] mx-auto space-y-5">
               <DashboardKPIs />
 
               {/* Charts Row */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                 <div className="lg:col-span-2">
                   <LeadPipelineChart />
                 </div>
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                 <div className="lg:col-span-2">
                   <LeadSourcesChart />
                 </div>
@@ -40,7 +40,7 @@ const AdminDashboard = () => {
               </div>
 
               {/* Operational Row */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 <ActiveProjects />
                 <TodayFollowups />
               </div>
