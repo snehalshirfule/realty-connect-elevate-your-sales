@@ -4,6 +4,10 @@ import PropertyHighlights from "@/components/property/PropertyHighlights";
 import PropertyTrustStrip from "@/components/property/PropertyTrustStrip";
 import PropertyEnquiryForm from "@/components/property/PropertyEnquiryForm";
 import PropertyAmenities from "@/components/property/PropertyAmenities";
+import PropertyConfigurations from "@/components/property/PropertyConfigurations";
+import PropertyAboutBuilder from "@/components/property/PropertyAboutBuilder";
+import PropertyFAQ from "@/components/property/PropertyFAQ";
+import PropertyFinalCTA from "@/components/property/PropertyFinalCTA";
 import PropertyFooter from "@/components/property/PropertyFooter";
 import { MapPin, ShieldCheck, Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -116,9 +120,13 @@ const AdCampaignTemplate = ({ data }: Props) => {
       </div>
 
       <PropertyAmenities amenities={data.amenities} variant="compact" />
+      <PropertyConfigurations configurations={data.configurations} variant="cards" onEnquire={scrollToForm} />
+      <PropertyAboutBuilder data={data} />
+      <PropertyFAQ faqs={data.faqs} />
+      <PropertyFinalCTA data={data} onEnquire={scrollToForm} />
       <PropertyFooter data={data} />
 
-      {/* Sticky bottom bar — mobile only, single CTA */}
+      {/* Sticky bottom bar — mobile only */}
       <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-background/95 backdrop-blur-sm border-t border-border shadow-elevated">
         <div className="container flex items-center justify-between gap-3 px-4 py-3">
           <div className="min-w-0">
