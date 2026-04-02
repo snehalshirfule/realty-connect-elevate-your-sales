@@ -73,6 +73,18 @@ export interface PropertyData {
   // Trust
   trustBadges?: string[];
 
+  // About Builder
+  aboutBuilder?: string;
+  builderExperience?: string;
+  builderProjects?: string;
+
+  // FAQs
+  faqs?: { question: string; answer: string }[];
+
+  // Final CTA
+  finalCtaHeadline?: string;
+  finalCtaSubtext?: string;
+
   // Theme
   theme?: PropertyTheme;
 }
