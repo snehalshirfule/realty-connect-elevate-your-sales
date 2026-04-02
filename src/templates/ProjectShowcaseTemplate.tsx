@@ -9,6 +9,9 @@ import PropertyLocationMap from "@/components/property/PropertyLocationMap";
 import PropertyBrochureCTA from "@/components/property/PropertyBrochureCTA";
 import PropertyConfigurations from "@/components/property/PropertyConfigurations";
 import PropertyEnquiryForm from "@/components/property/PropertyEnquiryForm";
+import PropertyAboutBuilder from "@/components/property/PropertyAboutBuilder";
+import PropertyFAQ from "@/components/property/PropertyFAQ";
+import PropertyFinalCTA from "@/components/property/PropertyFinalCTA";
 import PropertyFooter from "@/components/property/PropertyFooter";
 
 interface Props {
@@ -45,7 +48,10 @@ const ProjectShowcaseTemplate = ({ data }: Props) => {
       <PropertyGallery gallery={data.gallery} />
       <PropertyConfigurations configurations={data.configurations} variant="cards" onEnquire={scrollToForm} />
       <PropertyLocationMap data={data} />
+      <PropertyAboutBuilder data={data} />
       <PropertyBrochureCTA data={data} />
+      <PropertyFAQ faqs={data.faqs} />
+      <PropertyFinalCTA data={data} onEnquire={scrollToForm} />
       <PropertyEnquiryForm data={data} variant="fullwidth" />
       <PropertyFooter data={data} />
     </div>

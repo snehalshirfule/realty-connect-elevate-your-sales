@@ -13,6 +13,9 @@ import PropertyLocationMap from "@/components/property/PropertyLocationMap";
 import PropertyBrochureCTA from "@/components/property/PropertyBrochureCTA";
 import PropertyEnquiryForm from "@/components/property/PropertyEnquiryForm";
 import PropertyStickyCTA from "@/components/property/PropertyStickyCTA";
+import PropertyAboutBuilder from "@/components/property/PropertyAboutBuilder";
+import PropertyFAQ from "@/components/property/PropertyFAQ";
+import PropertyFinalCTA from "@/components/property/PropertyFinalCTA";
 import PropertyFooter from "@/components/property/PropertyFooter";
 
 interface Props {
@@ -50,7 +53,10 @@ const InventoryTemplate = ({ data }: Props) => {
       <PropertyAmenities amenities={data.amenities} variant="grid" />
       <PropertyGallery gallery={data.gallery} />
       <PropertyLocationMap data={data} />
+      <PropertyAboutBuilder data={data} />
       <PropertyBrochureCTA data={data} />
+      <PropertyFAQ faqs={data.faqs} />
+      <PropertyFinalCTA data={data} onEnquire={scrollToForm} />
       <PropertyEnquiryForm data={data} variant="fullwidth" />
       <PropertyFooter data={data} />
       <PropertyStickyCTA data={data} onEnquire={scrollToForm} />
